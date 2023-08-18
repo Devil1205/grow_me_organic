@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+}
+
+.main2{
+    margin: 20px 0px;
+}
+
+.main2 > div{
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    background: #263251;
+    color: white;
+    border-radius: 4px;
+}
+
+.list{
+    position: relative;
+    /* overflow-y: hidden; */
+    padding: 0px 10px;
+}
+
+.list button{
+    position: absolute;
+    /* left: -35px; */
+    height: 20px;
+    display: flex;
+    align-items: center;
+    width: 15px;
+    padding: 0;
+    cursor: pointer;
+    top: 5px;
+    background: transparent;
+    border: none;
+    color: grey;
+    border-bottom: 3px solid white;
+}
+
+.subList{
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow-y: hidden;
+    transition: 0.8s ease-in-out;
+}
