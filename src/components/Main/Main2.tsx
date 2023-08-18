@@ -38,12 +38,12 @@ function Main2() {
     const [subListHead, setSubListHead] = useState<any[]>([]);
 
     useEffect(() => {
-        document.querySelectorAll('.listHead').forEach(element => {
+        document.querySelectorAll('.listHead').forEach(_element => {
             listHead.push(true);
         })
         document.querySelectorAll('.subList').forEach((element, index) => {
             subListHead.push([]);
-            element.childNodes.forEach(elem => {
+            element.childNodes.forEach(_elem => {
                 subListHead[index].push(true);
             })
             // console.log(element);
@@ -51,14 +51,14 @@ function Main2() {
     }, [])
 
 
-    const checkUncheck = (element: any, deptIndex: number) => {
+    const checkUncheck = (_element: any, deptIndex: number) => {
         let newArr = [...listHead];
         newArr[deptIndex] = !newArr[deptIndex];
         if (newArr[deptIndex]) {
             setSubListHead(prev => {
                 let temp = [...prev];
                 temp[deptIndex] = [...prev[deptIndex]];
-                temp[deptIndex].forEach((dept: any, ind: number) => {
+                temp[deptIndex].forEach((_dept: any, ind: number) => {
                     temp[deptIndex][ind] = true;
                 });
                 // console.log(temp);
@@ -69,7 +69,7 @@ function Main2() {
             setSubListHead(prev => {
                 let temp = [...prev];
                 temp[deptIndex] = [...prev[deptIndex]];
-                temp[deptIndex].forEach((dept: any, ind: number) => {
+                temp[deptIndex].forEach((_dept: any, ind: number) => {
                     temp[deptIndex][ind] = false;
                 });
                 // console.log(temp);
@@ -83,7 +83,7 @@ function Main2() {
         return array.every(Boolean);
     }
 
-    const checkAll = (element: any, deptIndex: number, subIndex: number) => {
+    const checkAll = (_element: any, deptIndex: number, subIndex: number) => {
         // console.log(subListHead);
         setSubListHead(prev => {
             let newArr = [...prev];
